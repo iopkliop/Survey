@@ -1,10 +1,36 @@
+/*
+window.onload = function() {
+  var labels = document.getElementsByClassName("label");
+
+  for (var i = 0; i < labels.length; i++) {
+    var labelId = labels[i].id;
+    var value = getCookie(labelId);
+
+    if (value !== "") {
+      document.getElementById(labelId).textContent = value;
+    }
+  }
+};
+function getCookie(name) {
+  var cookies = document.cookie.split(";");
+
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+
+    if (cookie.indexOf(name + "=") === 0) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+
+  return "";
+}
 function handleRadioClick(radioId, labelId) {
   var currentValue = parseInt(document.getElementById(labelId).textContent);
   var newValue = currentValue + 1;
   document.getElementById(labelId).textContent = newValue;
 
   // 값 증가 후 쿠키에 저장
-  document.cookie = labelId + "=" + newValue + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  document.cookie = labelId + "=" + newValue ;
 }
   
   // 제출 버튼 클릭 이벤트 핸들러
@@ -26,29 +52,35 @@ function handleRadioClick(radioId, labelId) {
     var labelId = "l" + selectedOption.substr(selectedOption.length - 1);
     handleRadioClick(selectedOption, labelId);
   }
+  */
   window.onload = function() {
-    var labels = document.getElementsByClassName("label");
-  
-    for (var i = 0; i < labels.length; i++) {
-      var labelId = labels[i].id;
-      var value = getCookie(labelId);
-  
-      if (value !== "") {
-        document.getElementById(labelId).textContent = value;
+    for (var i = 1; i <= 6; i++) {
+      var labelValue = getLabelValue("label" + i);
+      if (labelValue) {
+        document.getElementById("label" + i).textContent = labelValue;
       }
     }
   };
   
-  function getCookie(name) {
-    var cookies = document.cookie.split(";");
+  function incrementLabelValue(labelIndex) {
+    var currentValue = parseInt(document.getElementById("label" + labelIndex).textContent);
+    var newValue = currentValue + 1;
+    document.getElementById("label" + labelIndex).textContent = newValue;
+  }
   
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i].trim();
-  
-      if (cookie.indexOf(name + "=") === 0) {
-        return cookie.substring(name.length + 1);
-      }
+  function submitLabelValue() {
+    for (var i = 1; i <= 6; i++) {
+      var currentValue = parseInt(document.getElementById("label" + i).textContent);
+      setLabelValue("label" + i, currentValue);
+      
+    alert("제출 되었습니다!");
     }
+  }
   
-    return "";
+  function setLabelValue(labelId, value) {
+    localStorage.setItem(labelId, value);
+  }
+  
+  function getLabelValue(labelId) {
+    return localStorage.getItem(labelId);
   }
