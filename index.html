@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" >
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <title>2024 설선물 후보리스트</title>
+</head>
+<body>
+    <h1>2024 설선물 후보리스트</h1>
+    <table id="table" class="table-center">
+        <tr>
+            <th>이미지</th>
+            <th>링크</th>
+            <th>금액</th>
+            <th>선택</th>
+            <th>선택횟수</th>
+        </tr>
+        <tr>
+            <td><img src="https://img.cjthemarket.com/images/file/product/902/20231212142316724.jpg?SF=webp&RS=550x550" alt="이미지" width="200" height="200"></td>
+            <td><a href="https://www.cjthemarket.com/pc/prod/prodDetail?prdCd=40186799&ctgrId=&plnId=300006&giftSetEvntId=202300263">상세페이지</a></td>
+            <td>29,900</td>
+            <td><input type="radio" id="r1" onclick="handleRadioClick(r1,l1)" name="option" value="option1">선택</td>
+            <td id="t1"><label id="l1">0</label></td>
+        </tr>
+        <tr>
+            <td><img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F20231228_132%2F17037315417446OVA0_PNG%2F658ce154d7d532db958682d1.png&type=o&size=488x470&ttype=input" alt="이미지" width="200" height="200"></td>
+            <td><a href="https://brand.naver.com/kgcshop/products/7777836945">상세페이지</a></td>
+            <td>33,150</td>
+            <td><input type="radio" id="r2" onclick="handleRadioClick(r2,l2)" name="option" value="option2">선택</td>
+            <td id="t2"><label id="l2">0</label></td>
+        </tr>
+        <tr>
+            <td><img src="https://sitem.ssgcdn.com/12/15/37/item/1000036371512_i1_1100.jpg" alt="이미지" width="200" height="200"></td>
+            <td><a href="https://www.ssg.com/item/itemView.ssg?itemId=1000036371512&siteNo=6004&salestrNo=6005">상세페이지</a></td>
+            <td>31,900</td>
+            <td><input type="radio" id="r3"onclick="handleRadioClick(r3,l3)" name="option" value="option3">선택</td>
+            <td id="t3"><label id="l3">0</label></td>
+        </tr>
+        <tr>
+            <td><img src="https://sitem.ssgcdn.com/71/26/18/item/1000538182671_i1_1100.jpg" alt="이미지" width="200" height="200"></td>
+            <td><a href="https://www.ssg.com/item/itemView.ssg?itemId=1000538182671&siteNo=6001&salestrNo=6005&ckwhere=ssg_naver&appPopYn=n&utm_medium=PCS&utm_source=naver&utm_campaign=naver_pcs&NaPm=ct%3Dlr7cdmyo%7Cci%3D2d51db55cb95311a5fae9c74f776009291d9c639%7Ctr%3Dslsl%7Csn%3D218835%7Chk%3D3caa1abb396159019a89f61931fc51d49db05a58">상세페이지</a></td>
+            <td>23,900</td>
+            <td><input type="radio" id="r4" onclick="handleRadioClick(r4,l4)" name="option" value="option4">선택</td>
+            <td id="t4"><label id="l4">0</label></td>
+        </tr>
+        <tr>
+            <td><img src="https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/5707776544/B.png?481000000" alt="이미지" width="200" height="200"></td>
+            <td><a href="https://www.kgcshop.co.kr/shop/goodsView?itemId=96768">상세페이지</a></td>
+            <td>32,000</td>
+            <td><input type="radio" id="r5" onclick="handleRadioClick(r5,l5)" name="option" value="option5">선택</td>
+            <td id="t5"><label id="l5">0</label></td>
+        </tr>
+        <tr>
+            <td><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20231011_228%2F1697000433483iTfV7_JPEG%2F47246861372408980_749252872.jpg&type=a340" alt="이미지" width="200" height="200"></td>
+            <td><a href="https://smartstore.naver.com/bordin/products/8564634540?n_media=27758&n_query=%EB%8D%94%EC%B9%98%EC%BB%A4%ED%94%BC%EC%84%A0%EB%AC%BC%EC%84%B8%ED%8A%B8&n_rank=2&n_ad_group=grp-a001-02-000000034298845&n_ad=nad-a001-02-000000245199154&n_campaign_type=2&n_mall_id=bordin&n_mall_pid=8564634540&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlr7d3dns%7Cci%3D0Ae0000va9TzUmrfdfom%7Ctr%3Dpla%7Chk%3D96c5c245c1b485d911b835e5a196c0082a35e1f2">상세페이지</a></td>
+            <td>25,900</td>
+            <td><input type="radio"  onclick="handleRadioClick(r6,l6)" id="r6"  name="option" value="option6">선택</td>
+            <td id="t6"><label id="l6">0</label></td>
+        </tr>
+    </table>
+    
+<button onclick="handleSubmitButtonClick()">제출</button>
+</body>
+</html>
